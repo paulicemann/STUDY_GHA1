@@ -1,0 +1,23 @@
+name: Test project
+#on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aka build
+        run: |
+          echo "Building..."
+          sleep 20
+          echo "Building complete"
+      - name: Aka deploy
+        run: |
+          echo "Deploying..."
+          sleep 20
+          echo "Deploying complete"
