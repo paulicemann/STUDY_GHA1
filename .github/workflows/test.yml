@@ -14,3 +14,16 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aka build
+        run: |
+          echo "Building..."
+          sleep 30
+          echo "Building complete"
+      - name: Aka deploy
+        run: |
+          echo "Deploying..."
+          sleep 30
+          echo "Deploying complete"
